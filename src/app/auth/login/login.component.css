@@ -1,0 +1,17 @@
+.card {
+    width: 100%;
+  }
+  
+  .text-danger {
+    font-size: 0.875em;
+  }
+  
+  h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  label {
+    font-family: 'Arial', sans-serif;
+  }
+  

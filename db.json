@@ -1,0 +1,36 @@
+{
+  "user": [
+    {
+      "id": "7dec",
+      "username": "akshay",
+      "password": "1234567890",
+      "confirmPassword": "1234567890"
+    },
+    {
+      "id": "71ac",
+      "username": "shubham",
+      "password": "123456",
+      "confirmPassword": "123456"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "eac6",
+      "taskName": "Learning Java",
+      "taskDescription": "learn basic oops concept\n",
+      "username": "akshay"
+    },
+    {
+      "id": "ef41",
+      "taskName": "Node Revision",
+      "taskDescription": "Do Node revision for interview",
+      "username": "akshay"
+    },
+    {
+      "id": "69df",
+      "taskName": "learn angular",
+      "taskDescription": "i will learn angular",
+      "username": "shubham"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<app-carousel></app-carousel>
+<form class="text-center">
+    <button type="button" class="btn btn-primary" (click)="showTaskForm = !showTaskForm">Add Task</button>
+    <button type="button" class="btn btn-info ml-2" (click)="showTasks()">Show Tasks</button>
+</form>
+
+<div *ngIf="showTaskForm" class="task-form-container">
+    <div class="task-form">
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="taskName" class="form-label">Task Name</label>
+                <input type="text" id="taskName" class="form-control" formControlName="taskName">
+            </div>
+            <div class="mb-3">
+                <label for="taskDescription" class="form-label">Task Description</label>
+                <textarea id="taskDescription" class="form-control" formControlName="taskDescription"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success" [disabled]="!taskForm.valid">Submit</button>
+                <button type="button" class="btn btn-secondary ml-2" (click)="showTaskForm = false">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Tasks Modal -->
+<div class="modal fade" tabindex="-1" [ngClass]="{'show': showTasksModal}" style="display: block;" *ngIf="showTasksModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">All Tasks</h5>
+                <button type="button" class="btn-close" (click)="showTasksModal = false" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div *ngFor="let task of tasks" class="task-item">
+                    <h6>{{ task.taskName }}</h6>
+                    <p>{{ task.taskDescription }}</p>
+                    <button type="button" class="btn btn-success" (click)="deleteTask(task.id)">Complete</button>
+                    <hr>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="showTasksModal = false">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

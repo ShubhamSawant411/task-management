@@ -1,0 +1,10 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-text {
+    margin-left: auto; /* Pushes the text to the left */
+    margin-right: 20px;
+  }
+  

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary m-2" (click)="toggleForm()">{{ showRegistration ? 'Already have account?' : 'Wanna make account?' }}</button>
+    </div>
+    
+    <div *ngIf="showRegistration">
+      <app-registration (switchLogin)="toggleForm()"></app-registration>
+    </div>
+    
+    <div *ngIf="!showRegistration">
+      <app-login></app-login>
+    </div>
+  </div>
+  

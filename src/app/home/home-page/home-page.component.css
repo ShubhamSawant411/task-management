@@ -1,0 +1,56 @@
+/* Center the task form with overlay */
+.task-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1050; /* Ensure it appears above other elements */
+}
+
+/* Style the task form */
+.task-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal styling for tasks */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3.5rem); /* Adjust for header/footer */
+}
+
+/* Ensure the modal looks good and is centered */
+.modal-content {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+/* Style each task item */
+.task-item {
+    margin-bottom: 1rem;
+}
+
+/* Modal backdrop style */
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+/* Additional styles for form labels */
+.task-form .form-label {
+    font-weight: bold;
+}
+
+/* Margin-left utility for buttons */
+.text-center .ml-2 {
+    margin-left: 8px;
+}
